@@ -84,14 +84,13 @@ const Subjects = () => {
           <Spinner variant="primary" className="absolute left-[50%] mt-4" />
         ) : (
           <div className="flex gap-4 flex-wrap">
-            {/* Render subjects */}
             {subjects.map((subject) => (
               <div
                 key={subject.id}
-                className="m-8 flex justify-start w-[20vw] cursor-pointer shadow-xl shadow-blue-200"
+                className="m-8 flex justify-start w-[20vw] cursor-pointer shadow-xl shadow-blue-200 h-[10vh]"
               >
                 <div
-                  className="flex justify-center items-center bg-blue-100 p-4 rounded-md cursor-pointer w-full h-full"
+                  className="flex justify-center items-center bg-blue-100 p-4 rounded-md w-full h-full cursor-pointer"
                   onClick={() => navigate(`/subjects/${subject.id}`)}
                 >
                   <div className="text-blue-900 text-4xl text-center">
@@ -102,12 +101,12 @@ const Subjects = () => {
             ))}
 
             {/* "+" button to add a subject */}
-            <div className="flex justify-start w-[20vw]">
+            <div className="m-8 flex justify-start w-[20vw] cursor-pointer shadow-xl shadow-blue-200 h-[10vh]">
               <div
-                className="ml-8 flex justify-center items-center bg-blue-100 p-4 rounded-md w-full h-full cursor-pointer shadow-xl shadow-blue-200"
+                className="flex justify-center items-center bg-blue-100 p-4 rounded-md w-full h-full cursor-pointer"
                 onClick={() => setModal(true)}
               >
-                <div className="text-blue-900 text-4xl flex justify-center items-center text-center">
+                <div className="text-blue-900 text-4xl flex justify-center items-center text-center h-full w-full">
                   <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                     +
                   </div>
