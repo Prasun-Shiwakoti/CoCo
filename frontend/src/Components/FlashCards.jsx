@@ -26,7 +26,7 @@ const FlashCards = () => {
       const res = await fetch(`http://10.10.11.29:8000/flashcard?id=${id}`, {
         method: "GET",
         headers: {
-          authorization: `token ${token}`,
+          "authorization": `token ${token}`,
         },
       });
       const response = await res.json();
@@ -56,7 +56,6 @@ const FlashCards = () => {
         <hr className="border-blue-900 w-[95%]" />
       </div>
       <Carousel className=" h-[80vh] flex items-center " interval={null}>
-        {console.log(flashCards)}
         {flashCards.map((card) => (
           <Carousel.Item>
             <div
@@ -65,7 +64,7 @@ const FlashCards = () => {
             >
               <div className="flashcard p-6 bg-blue-200 text-center rounded-lg w-[80%] max-w-[800px]">
                 <h3 className="text-xl font-bold">Flashcard 1</h3>
-                <p className="text-lg mt-2">{card}</p>
+                <p className="text-lg mt-2">{JSON.stringify(card)}</p>
               </div>
             </div>
           </Carousel.Item>
